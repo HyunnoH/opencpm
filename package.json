@@ -1,0 +1,9 @@
+{
+  "name": "opencpm",
+  "version": "0.0.1",
+  "description": "Open source Critical Path Method analysis and visualization tool",
+  "main": "index.js",
+  "repository": "https://github.com/hyunnoh/opencpm",
+  "author": "Hyun Oh <hyunnoh01@gmail.com>",
+  "license": "Apache-2.0"
+}
