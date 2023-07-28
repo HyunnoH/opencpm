@@ -30,6 +30,7 @@
     "vitest": "^0.33.0"
   },
   "scripts": {
+    "dev:renderer": "vite packages/renderer",
     "postinstall": "husky install"
   },
   "nano-staged": {
