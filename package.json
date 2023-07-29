@@ -2,10 +2,30 @@
   "name": "opencpm",
   "version": "0.0.1",
   "description": "Open source Critical Path Method analysis and visualization tool",
-  "main": "index.js",
+  "main": "packages/main/dist/index.cjs",
   "repository": "https://github.com/hyunnoh/opencpm",
   "author": "Hyun Oh <hyunnoh01@gmail.com>",
   "license": "Apache-2.0",
+  "scripts": {
+    "build": "npm run build:main && npm run build:preload && npm run build:renderer",
+    "build:main": "cd ./packages/main && vite build",
+    "build:preload": "cd ./packages/preload && vite build",
+    "build:renderer": "cd ./packages/renderer && vite build",
+    "compile": "MODE=production npm run build && electron-builder build --config .electron-builder.config.js --dir --config.asar=false",
+    "test": "npm run test:main && npm run test:preload && npm run test:renderer && npm run test:e2e",
+    "test:e2e": "npm run build && vitest run",
+    "test:main": "vitest run -r packages/main --passWithNoTests",
+    "test:preload": "vitest run -r packages/preload --passWithNoTests",
+    "test:renderer": "vitest run -r packages/renderer --passWithNoTests",
+    "watch": "node scripts/watch.mjs",
+    "lint": "eslint . --ext js,mjs,cjs,ts,mts,cts,vue",
+    "typecheck:main": "tsc --noEmit -p packages/main/tsconfig.json",
+    "typecheck:preload": "tsc --noEmit -p packages/preload/tsconfig.json",
+    "typecheck:renderer": "vue-tsc --noEmit -p packages/renderer/tsconfig.json",
+    "typecheck": "npm run typecheck:main && npm run typecheck:preload && npm run typecheck:renderer",
+    "postinstall": "ELECTRON_RUN_AS_NODE=1 electron scripts/update-electron-vendors.mjs",
+    "format": "npx prettier --write \"**/*.{js,mjs,cjs,ts,mts,cts,vue,json}\""
+  },
   "devDependencies": {
     "@types/node": "^18.16.1",
     "@types/react": "^18.2.17",
@@ -26,12 +46,12 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "typescript": "^5.1.6",
+    "unplugin-auto-expose": "^0.0.5",
     "vite": "^4.4.7",
     "vitest": "^0.33.0"
   },
-  "scripts": {
-    "dev:renderer": "vite packages/renderer",
-    "postinstall": "husky install"
+  "dependencies": {
+    "electron-updater": "^6.1.1"
   },
   "nano-staged": {
     "*.{js,ts}": [
