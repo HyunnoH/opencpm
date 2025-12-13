@@ -10,12 +10,11 @@
     "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
-      "#preload": ["../preload/src/index"],
       "/@/*": ["./src/*"]
     },
     "lib": ["ESNext", "dom", "dom.iterable"],
     "allowSyntheticDefaultImports": true
   },
-  "include": ["src", "types/**/*.d.ts", "../../types/**/*.d.ts"],
+  "include": ["src"],
   "exclude": ["**/*.spec.ts", "**/*.test.ts"]
 }
