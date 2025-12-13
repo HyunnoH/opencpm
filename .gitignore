@@ -176,3 +176,11 @@ sketch
 # End of https://www.toptal.com/developers/gitignore/api/react,node,visualstudiocode
 
 .electron-vendors.cache.json
+
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/sdks
+!.yarn/versions
