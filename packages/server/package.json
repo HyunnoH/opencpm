@@ -4,5 +4,17 @@
   "description": "Open source Critical Path Method analysis and visualization tool",
   "author": "Hyun Oh <hyunnoh01@gmail.com>",
   "license": "Apache-2.0",
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.12.0",
+  "devDependencies": {
+    "@types/express": "^5",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.3",
+    "express": "^5.2.1"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/main.js"
+  }
 }
