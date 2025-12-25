@@ -1,0 +1,7 @@
+**/node_modules
+**/dist
+**/.cache
+**/.turbo
+**/.vite
+.git
+.DS_Store
