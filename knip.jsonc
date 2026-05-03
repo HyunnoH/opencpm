@@ -1,0 +1,9 @@
+{
+  "$schema": "https://unpkg.com/knip@6/schema-jsonc.json",
+  "workspaces": {
+    "packages/*": {
+      "entry": ["src/main.{ts,tsx}"],
+      "project": ["**/*.{js,ts,tsx}"],
+    },
+  },
+}
