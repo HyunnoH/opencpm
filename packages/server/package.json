@@ -5,14 +5,14 @@
   "author": "Hyun Oh <hyunnoh01@gmail.com>",
   "license": "Apache-2.0",
   "packageManager": "yarn@4.12.0",
-  "devDependencies": {
-    "@types/express": "^5",
-    "tsx": "^4.19.2",
-    "typescript": "^5.9.3"
-  },
   "dependencies": {
     "dotenv": "^17.2.3",
     "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "@types/express": "^5",
+    "tsx": "^4.19.2",
+    "typescript": "^6"
   },
   "scripts": {
     "dev": "tsx watch --clear-screen=false src/main.ts",
