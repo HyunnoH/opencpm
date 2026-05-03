@@ -1183,7 +1183,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:8.49.0, @typescript-eslint/eslint-plugin@npm:^8.49.0":
+"@typescript-eslint/eslint-plugin@npm:8.49.0":
   version: 8.49.0
   resolution: "@typescript-eslint/eslint-plugin@npm:8.49.0"
   dependencies:
@@ -1203,7 +1203,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:8.49.0, @typescript-eslint/parser@npm:^8.49.0":
+"@typescript-eslint/parser@npm:8.49.0":
   version: 8.49.0
   resolution: "@typescript-eslint/parser@npm:8.49.0"
   dependencies:
@@ -4246,8 +4246,6 @@ __metadata:
   resolution: "opencpm@workspace:."
   dependencies:
     "@types/node": "npm:^24.10.3"
-    "@typescript-eslint/eslint-plugin": "npm:^8.49.0"
-    "@typescript-eslint/parser": "npm:^8.49.0"
     eslint: "npm:^9.39.2"
     eslint-config-prettier: "npm:^10.1.8"
     eslint-plugin-react: "npm:^7.37.5"
